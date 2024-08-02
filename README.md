@@ -1,7 +1,7 @@
 # pfRICH-Translation-Stage
 Python Script for KDC101 Motor Control
 
-Link to Thorlabs Motion Control Manual: https://www.thorlabs.com/Software/Motion%20Control/APT_Communications_Protocol.pdf
+Link to Thorlabs Motion Control Manual: https://www.thorlabs.com/Software/Motion%20Control/APT_Communications_Protocol.pdf <br>
 
 
 
