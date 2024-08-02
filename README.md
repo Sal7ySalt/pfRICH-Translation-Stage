@@ -1,5 +1,5 @@
 # pfRICH-Translation-Stage
-Python Script for KDC101 Motor Control <br>
+Python Script for KDC101 Motor Control in Linux Debian <br>
 
 Link to Thorlabs Motion Control Manual: https://www.thorlabs.com/Software/Motion%20Control/APT_Communications_Protocol.pdf <br>
 <br>
