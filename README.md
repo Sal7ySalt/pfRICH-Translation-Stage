@@ -15,8 +15,8 @@ Setting up python script on VSCODE: <br>
 		
 3. If above command returns nothing: <br>
 	'sudo modprobe ftdi_sio' <br>
-	run step 2. again <br>
-	run step 1. again <br>
+	run step 2 again <br>
+	run step 1 again <br>
 	You shold see outputs
 
 4. Open python environment: <br>
