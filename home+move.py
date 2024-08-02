@@ -1,14 +1,3 @@
-"""
-Example KDC101_serial.py
-Example Date of Creation: 2023-12-12
-Example Date of Last Modification on Github: 2023-12-12
-Version of Python used for Testing: 3.11.4
-==================
-Example Description: The example shows how to connect to KDC101 on Windows and Linux. The motor is homed and moved 1 mm
-Tested with KDC101 and Z812 
-"""
-
-
 import serial
 import time
 from binascii import unhexlify
@@ -109,6 +98,7 @@ def main():
 
     #Move Stage; MGMSG_MOT_MOVE_ABSOLUTE
     Move = "5304"
+    print("Moving Stage")
     ser.write(unhexlify(Move + "0600" + DestinationI + Source + ChanIdent) + AbsDistanceDU.to_bytes(4, byteorder="little"))
 
     #Confirm stage moved before advancing; MGMSG_MOT_MOVE_COMPLETED
@@ -116,9 +106,10 @@ def main():
     Completed = unhexlify("6404")
     while Rx != Completed:
         Rx = ser.read(2)
-    print('Stage Moved')
+    print('Finished Moving')
     ser.flushInput()
     ser.flushOutput()
+
 
     #Get Position; MGMSG_MOT_REQ_USTATUSUPDATE
     Status = "9004"
