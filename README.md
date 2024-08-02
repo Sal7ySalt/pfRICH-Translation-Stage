@@ -16,7 +16,7 @@ Python Script for KDC101 Motor Control
 	You shold see outputs
 
 4. Open python environment: <br>
-   	go to directory /home/rhig
+   	go to directory /home/rhig <br>
    	'source translation/bin/activate'
 
 5. Ready to run python script: <br>
