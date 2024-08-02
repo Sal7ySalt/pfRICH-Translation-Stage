@@ -16,15 +16,6 @@ from binascii import unhexlify
 def main():
 
     #open serial port
-
-    #For Windows
-    #find out COM port number in the Device Manager and adapt the following line
-    #ser=serial.Serial(port='COM4',baudrate=115200,bytesize=8,
-  ##                    parity=serial.PARITY_NONE,
-  ##                    stopbits=1,xonxoff=0,
-  ##                    rtscts=0,
-  ##                    timeout=1)
-
     #For Linux
     # use 'dmesg | grep tty' to find serial port
     # eventually need to change permissions for /dev/tty*
@@ -81,8 +72,8 @@ def main():
     #Set Velocity; MGMSG_MOT_SET_VELPARAMS
     Velocity = "1304"
     MinVelocity = 0 #mm/s
-    Acceleration = 1 #mm/s²
-    MaxVelocity = 0.1 #mm/s
+    Acceleration = 0.5 #mm/s²
+    MaxVelocity = 0.5 #mm/s
 
     MinVelocityDU = round(Device_Unit_Vel * MinVelocity)
     AccelerationDU = round(Device_Unit_Acc * Acceleration)
