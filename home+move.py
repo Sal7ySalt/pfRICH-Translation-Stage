@@ -81,20 +81,22 @@ def main():
 
     ser.write(unhexlify(Velocity + "0E00" + DestinationI + Source + ChanIdent) + MinVelocityDU.to_bytes(4, byteorder="little") + AccelerationDU.to_bytes(4, byteorder="little") + MaxVelocityDU.to_bytes(4, byteorder="little"))
 
-    AbsDistance = 12 #mm
+    AbsDistance = 20 #mm
     AbsDistanceDU = round(Device_Unit_SF * AbsDistance)
 
     #Move Stage; MGMSG_MOT_MOVE_ABSOLUTE
     Move = "5304"
     ser.write(unhexlify(Move + "0600" + DestinationI + Source + ChanIdent) + AbsDistanceDU.to_bytes(4, byteorder="little"))
 
+    print("Starting to leep")
     time.sleep(10)
+    print("Finished Sleeping")
 
     #Set Velocity; MGMSG_MOT_SET_VELPARAMS
     Velocity = "1304"
     MinVelocity = 0 #mm/s
     Acceleration = 1 #mm/s²
-    MaxVelocity = 2 #mm/s
+    MaxVelocity = 1.5 #mm/s
 
     MinVelocityDU = round(Device_Unit_Vel * MinVelocity)
     AccelerationDU = round(Device_Unit_Acc * Acceleration)
@@ -102,7 +104,7 @@ def main():
 
     ser.write(unhexlify(Velocity + "0E00" + DestinationI + Source + ChanIdent) + MinVelocityDU.to_bytes(4, byteorder="little") + AccelerationDU.to_bytes(4, byteorder="little") + MaxVelocityDU.to_bytes(4, byteorder="little"))
 
-    AbsDistance = 12 #mm
+    AbsDistance = 20 #mm
     AbsDistanceDU = round(Device_Unit_SF * AbsDistance)
 
     #Move Stage; MGMSG_MOT_MOVE_ABSOLUTE
