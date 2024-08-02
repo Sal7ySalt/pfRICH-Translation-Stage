@@ -1,9 +1,11 @@
 # pfRICH-Translation-Stage
-Python Script for KDC101 Motor Control
+Python Script for KDC101 Motor Control <br>
 
 Link to Thorlabs Motion Control Manual: https://www.thorlabs.com/Software/Motion%20Control/APT_Communications_Protocol.pdf <br>
+<br>
+<br>
 
-
+Setting up python script on VSCODE: <br>
 
 1. Ensure that the KDC101 usb is propertly attached and not disconnected: <br>
 	'sudo dmesg | grep -i usb'
