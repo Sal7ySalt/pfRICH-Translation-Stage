@@ -37,5 +37,5 @@ Setting up python script on VSCODE: <br>
 	to double check your environment path write in terminal 'which python' when the environment is activated<br>
 	paste the above path into the python interpreter path on VSCODE  
 	
-6. After experiment is done, exist VSCODE or deactivate environment: <br>
+6. After experiment is done, exit VSCODE or deactivate environment: <br>
    	'deactivate'
