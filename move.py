@@ -2,7 +2,7 @@ import serial
 import time
 from binascii import unhexlify
 
-def main():
+def move():
 
     #open serial port
     #For Linux
@@ -93,5 +93,5 @@ def main():
     ser.close()
 
 if __name__ == "__main__":
-    main()
+    move()
 
