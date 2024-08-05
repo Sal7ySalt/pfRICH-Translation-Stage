@@ -2,6 +2,7 @@ import serial
 import time
 from binascii import unhexlify
 from setup.py import setup
+from getposition.py import getposition
 
 def home():
 
@@ -21,18 +22,7 @@ def home():
     ser.flushInput()
     ser.flushOutput()
     
-    #Get Position; MGMSG_MOT_REQ_USTATUSUPDATE
-    Status = "9004"
-    ser.write(unhexlify(Status + Channel + "00" + Destination + Source))
-    
-    Rx = ser.read(20)
-    
-    Position = Rx[8:12]
-    
-    PositionDU = int.from_bytes(Position, "little")
-    print("Position:", PositionDU, "Device Units" )
-    PositionRU = PositionDU / 34304
-    print("Position:", PositionRU, "mm")
+    getposition()
     
     #Disable Stage; MGMSG_MOD_SET_CHANENABLESTATE
     Enable = "1002"
