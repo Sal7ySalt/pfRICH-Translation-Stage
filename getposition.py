@@ -6,6 +6,8 @@ from setup.py import setup
 
 def getposition():
 
+    setup()
+
     #Get Position; MGMSG_MOT_REQ_USTATUSUPDATE
     Status = "9004"
     ser.write(unhexlify(Status + Channel + "00" + Destination + Source))
