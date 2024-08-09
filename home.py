@@ -1,8 +1,8 @@
 import serial
 import time
 from binascii import unhexlify
-from setup.py import setup
-from getposition.py import getposition
+from setup import setup
+from getposition import getposition
 
 def home():
 
